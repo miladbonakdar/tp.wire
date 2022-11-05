@@ -105,6 +105,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AdminAuthApi* | [**AdminAuthLoginPost**](docs/AdminAuthApi.md#adminauthloginpost) | **POST** /AdminAuth/Login | 
 *AdminAuthApi* | [**AdminAuthRefreshTokenPost**](docs/AdminAuthApi.md#adminauthrefreshtokenpost) | **POST** /AdminAuth/RefreshToken | 
+*AssistantListingApi* | [**AssistantListingListingPost**](docs/AssistantListingApi.md#assistantlistinglistingpost) | **POST** /AssistantListing/Listing | 
+*AssistantListingApi* | [**AssistantListingUserListingPost**](docs/AssistantListingApi.md#assistantlistinguserlistingpost) | **POST** /AssistantListing/UserListing | 
 *HealthApi* | [**HealthGet**](docs/HealthApi.md#healthget) | **GET** /Health | 
 *InterestApi* | [**InterestForceUpdateCachePost**](docs/InterestApi.md#interestforceupdatecachepost) | **POST** /Interest/ForceUpdateCache | 
 *InterestApi* | [**InterestGet**](docs/InterestApi.md#interestget) | **GET** /Interest | 
@@ -117,6 +119,8 @@ Class | Method | HTTP request | Description
 *ProfileApi* | [**ProfileUpdateInterestsPost**](docs/ProfileApi.md#profileupdateinterestspost) | **POST** /Profile/UpdateInterests | 
 *ProfileApi* | [**ProfileUpdateProfilePatch**](docs/ProfileApi.md#profileupdateprofilepatch) | **PATCH** /Profile/UpdateProfile | 
 *ProfileApi* | [**ProfileUploadAvatarPatch**](docs/ProfileApi.md#profileuploadavatarpatch) | **PATCH** /Profile/UploadAvatar | 
+*ProfileSecurityApi* | [**ProfileSecurityEmailVerifyPatch**](docs/ProfileSecurityApi.md#profilesecurityemailverifypatch) | **PATCH** /ProfileSecurity/EmailVerify | 
+*ProfileSecurityApi* | [**ProfileSecuritySendEmailVerifyRequestPost**](docs/ProfileSecurityApi.md#profilesecuritysendemailverifyrequestpost) | **POST** /ProfileSecurity/SendEmailVerifyRequest | 
 *ProfileSecurityApi* | [**ProfileSecurityUpdatePasswordOtpRequestPost**](docs/ProfileSecurityApi.md#profilesecurityupdatepasswordotprequestpost) | **POST** /ProfileSecurity/UpdatePasswordOtpRequest | 
 *ProfileSecurityApi* | [**ProfileSecurityUpdatePasswordOtpVerifyPatch**](docs/ProfileSecurityApi.md#profilesecurityupdatepasswordotpverifypatch) | **PATCH** /ProfileSecurity/UpdatePasswordOtpVerify | 
 *ProfileSecurityApi* | [**ProfileSecurityUpdatePasswordPatch**](docs/ProfileSecurityApi.md#profilesecurityupdatepasswordpatch) | **PATCH** /ProfileSecurity/UpdatePassword | 
@@ -135,6 +139,9 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.AddInterestReq](docs/AddInterestReq.md)
+ - [Model.AssistantListItem](docs/AssistantListItem.md)
+ - [Model.AssistantListingReq](docs/AssistantListingReq.md)
+ - [Model.AssistantListingRes](docs/AssistantListingRes.md)
  - [Model.CanBeAssistantRes](docs/CanBeAssistantRes.md)
  - [Model.EmailPasswordLoginReq](docs/EmailPasswordLoginReq.md)
  - [Model.EmptyResponse](docs/EmptyResponse.md)
@@ -151,11 +158,13 @@ Class | Method | HTTP request | Description
  - [Model.ProfileSettingDto](docs/ProfileSettingDto.md)
  - [Model.ProfileType](docs/ProfileType.md)
  - [Model.RefreshTokenReq](docs/RefreshTokenReq.md)
+ - [Model.SendEmailVerifyRes](docs/SendEmailVerifyRes.md)
  - [Model.UpdateInterestsReq](docs/UpdateInterestsReq.md)
  - [Model.UpdatePasswordReq](docs/UpdatePasswordReq.md)
  - [Model.UpdateProfileReq](docs/UpdateProfileReq.md)
  - [Model.UpdateProfileSettingReq](docs/UpdateProfileSettingReq.md)
  - [Model.UserRegisterReq](docs/UserRegisterReq.md)
+ - [Model.ValidateEmailReq](docs/ValidateEmailReq.md)
  - [Model.ValidateOtpUpdatePasswordReq](docs/ValidateOtpUpdatePasswordReq.md)
  - [Model.ValidatePhoneVerificationReq](docs/ValidatePhoneVerificationReq.md)
  - [Model.VerifyPhoneReq](docs/VerifyPhoneReq.md)

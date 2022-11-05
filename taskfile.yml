@@ -1,0 +1,25 @@
+version: '3'
+
+tasks:
+  gen-profile:
+    cmds:
+      - java -jar openapi-generator-cli-6.2.0.jar generate -i http://localhost:4001/swagger/v1/swagger.json -g csharp-netcore -c profile.json -o profile.wire
+
+  profile:
+    deps : [gen-profile]
+    dir: profile.wire/src/profile.wire
+    desc: generate profile c# package and build with specific version 
+    cmds:
+      - sed -i '' -e 's#<Authors>OpenAPI</Authors>#<Authors>Milad Bonakdar</Authors>#g' profile.wire.csproj
+      - sed -i '' -e 's#<RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>#<RepositoryUrl>https://github.com/miladbonakdar/tp.wire</RepositoryUrl>#g' profile.wire.csproj
+      - sed -i '' -e 's#<Version>1.0.0</Version>#<Version>{{.CLI_ARGS}}</Version>#g' profile.wire.csproj
+      - | 
+        sed -i '' '21i\ 
+        <LangVersion>8</LangVersion>' profile.wire.csproj
+      - |
+        sed -i '' '21i\
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>' profile.wire.csproj
+      - dotnet build -c release
+        
+  
+      

@@ -1,13 +1,17 @@
-helpers for swagger code gen
-```shell
-java -jar swagger-codegen-cli-3.0.35.jar generate -i http://{{swaggerUrl}}/swagger.json  -l typescript-axios -o /home/milad/RiderProjects/tp.wire/{{Package}}
-
-java -jar swagger-codegen-cli-3.0.35.jar config-help -l csharp
-
-java -jar swagger-codegen-cli-3.0.35.jar langs
+##Install Task file [TaskFile](https://taskfile.dev/installation/)
+```bash
+brew install go-task/tap/go-task
+# or
+sudo snap install task --classic
+```
+##Commands of task file 
+```bash
+# generate package with version, can be something like 1.0.1 
+task profile -- VERSION
 ```
 
-helpers for open api generator
+##helpers for open api generator
+
 ```shell
 java -jar openapi-generator-cli-6.2.0.jar help generate
 

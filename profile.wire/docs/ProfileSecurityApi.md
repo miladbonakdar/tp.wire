@@ -4,11 +4,188 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
+| [**ProfileSecurityEmailVerifyPatch**](ProfileSecurityApi.md#profilesecurityemailverifypatch) | **PATCH** /ProfileSecurity/EmailVerify |  |
+| [**ProfileSecuritySendEmailVerifyRequestPost**](ProfileSecurityApi.md#profilesecuritysendemailverifyrequestpost) | **POST** /ProfileSecurity/SendEmailVerifyRequest |  |
 | [**ProfileSecurityUpdatePasswordOtpRequestPost**](ProfileSecurityApi.md#profilesecurityupdatepasswordotprequestpost) | **POST** /ProfileSecurity/UpdatePasswordOtpRequest |  |
 | [**ProfileSecurityUpdatePasswordOtpVerifyPatch**](ProfileSecurityApi.md#profilesecurityupdatepasswordotpverifypatch) | **PATCH** /ProfileSecurity/UpdatePasswordOtpVerify |  |
 | [**ProfileSecurityUpdatePasswordPatch**](ProfileSecurityApi.md#profilesecurityupdatepasswordpatch) | **PATCH** /ProfileSecurity/UpdatePassword |  |
 | [**ProfileSecurityUpdatePhoneRequestPost**](ProfileSecurityApi.md#profilesecurityupdatephonerequestpost) | **POST** /ProfileSecurity/UpdatePhoneRequest |  |
 | [**ProfileSecurityUpdatePhoneVerifyPatch**](ProfileSecurityApi.md#profilesecurityupdatephoneverifypatch) | **PATCH** /ProfileSecurity/UpdatePhoneVerify |  |
+
+<a name="profilesecurityemailverifypatch"></a>
+# **ProfileSecurityEmailVerifyPatch**
+> EmptyResponse ProfileSecurityEmailVerifyPatch (ValidateEmailReq? validateEmailReq = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using profile.wire.Api;
+using profile.wire.Client;
+using profile.wire.Model;
+
+namespace Example
+{
+    public class ProfileSecurityEmailVerifyPatchExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure Bearer token for authorization: Bearer
+            config.AccessToken = "YOUR_BEARER_TOKEN";
+
+            var apiInstance = new ProfileSecurityApi(config);
+            var validateEmailReq = new ValidateEmailReq?(); // ValidateEmailReq? |  (optional) 
+
+            try
+            {
+                EmptyResponse result = apiInstance.ProfileSecurityEmailVerifyPatch(validateEmailReq);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ProfileSecurityApi.ProfileSecurityEmailVerifyPatch: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ProfileSecurityEmailVerifyPatchWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<EmptyResponse> response = apiInstance.ProfileSecurityEmailVerifyPatchWithHttpInfo(validateEmailReq);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProfileSecurityApi.ProfileSecurityEmailVerifyPatchWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **validateEmailReq** | [**ValidateEmailReq?**](ValidateEmailReq?.md) |  | [optional]  |
+
+### Return type
+
+[**EmptyResponse**](EmptyResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="profilesecuritysendemailverifyrequestpost"></a>
+# **ProfileSecuritySendEmailVerifyRequestPost**
+> SendEmailVerifyRes ProfileSecuritySendEmailVerifyRequestPost ()
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using profile.wire.Api;
+using profile.wire.Client;
+using profile.wire.Model;
+
+namespace Example
+{
+    public class ProfileSecuritySendEmailVerifyRequestPostExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure Bearer token for authorization: Bearer
+            config.AccessToken = "YOUR_BEARER_TOKEN";
+
+            var apiInstance = new ProfileSecurityApi(config);
+
+            try
+            {
+                SendEmailVerifyRes result = apiInstance.ProfileSecuritySendEmailVerifyRequestPost();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ProfileSecurityApi.ProfileSecuritySendEmailVerifyRequestPost: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ProfileSecuritySendEmailVerifyRequestPostWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<SendEmailVerifyRes> response = apiInstance.ProfileSecuritySendEmailVerifyRequestPostWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProfileSecurityApi.ProfileSecuritySendEmailVerifyRequestPostWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+### Return type
+
+[**SendEmailVerifyRes**](SendEmailVerifyRes.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="profilesecurityupdatepasswordotprequestpost"></a>
 # **ProfileSecurityUpdatePasswordOtpRequestPost**

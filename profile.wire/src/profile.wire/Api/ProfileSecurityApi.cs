@@ -30,6 +30,44 @@ namespace profile.wire.Api
         /// 
         /// </summary>
         /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="validateEmailReq"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EmptyResponse</returns>
+        EmptyResponse ProfileSecurityEmailVerifyPatch(ValidateEmailReq? validateEmailReq = default(ValidateEmailReq?), int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="validateEmailReq"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EmptyResponse</returns>
+        ApiResponse<EmptyResponse> ProfileSecurityEmailVerifyPatchWithHttpInfo(ValidateEmailReq? validateEmailReq = default(ValidateEmailReq?), int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SendEmailVerifyRes</returns>
+        SendEmailVerifyRes ProfileSecuritySendEmailVerifyRequestPost(int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SendEmailVerifyRes</returns>
+        ApiResponse<SendEmailVerifyRes> ProfileSecuritySendEmailVerifyRequestPostWithHttpInfo(int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OtpForgetPasswordRes</returns>
         OtpForgetPasswordRes ProfileSecurityUpdatePasswordOtpRequestPost(int operationIndex = 0);
@@ -133,6 +171,54 @@ namespace profile.wire.Api
     public interface IProfileSecurityApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="validateEmailReq"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EmptyResponse</returns>
+        System.Threading.Tasks.Task<EmptyResponse> ProfileSecurityEmailVerifyPatchAsync(ValidateEmailReq? validateEmailReq = default(ValidateEmailReq?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="validateEmailReq"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EmptyResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmptyResponse>> ProfileSecurityEmailVerifyPatchWithHttpInfoAsync(ValidateEmailReq? validateEmailReq = default(ValidateEmailReq?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SendEmailVerifyRes</returns>
+        System.Threading.Tasks.Task<SendEmailVerifyRes> ProfileSecuritySendEmailVerifyRequestPostAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SendEmailVerifyRes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SendEmailVerifyRes>> ProfileSecuritySendEmailVerifyRequestPostWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -374,6 +460,302 @@ namespace profile.wire.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="validateEmailReq"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EmptyResponse</returns>
+        public EmptyResponse ProfileSecurityEmailVerifyPatch(ValidateEmailReq? validateEmailReq = default(ValidateEmailReq?), int operationIndex = 0)
+        {
+            profile.wire.Client.ApiResponse<EmptyResponse> localVarResponse = ProfileSecurityEmailVerifyPatchWithHttpInfo(validateEmailReq);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="validateEmailReq"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EmptyResponse</returns>
+        public profile.wire.Client.ApiResponse<EmptyResponse> ProfileSecurityEmailVerifyPatchWithHttpInfo(ValidateEmailReq? validateEmailReq = default(ValidateEmailReq?), int operationIndex = 0)
+        {
+            profile.wire.Client.RequestOptions localVarRequestOptions = new profile.wire.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json",
+                "text/json",
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = profile.wire.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = profile.wire.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = validateEmailReq;
+
+            localVarRequestOptions.Operation = "ProfileSecurityApi.ProfileSecurityEmailVerifyPatch";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Bearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<EmptyResponse>("/ProfileSecurity/EmailVerify", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ProfileSecurityEmailVerifyPatch", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="validateEmailReq"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EmptyResponse</returns>
+        public async System.Threading.Tasks.Task<EmptyResponse> ProfileSecurityEmailVerifyPatchAsync(ValidateEmailReq? validateEmailReq = default(ValidateEmailReq?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            profile.wire.Client.ApiResponse<EmptyResponse> localVarResponse = await ProfileSecurityEmailVerifyPatchWithHttpInfoAsync(validateEmailReq, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="validateEmailReq"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EmptyResponse)</returns>
+        public async System.Threading.Tasks.Task<profile.wire.Client.ApiResponse<EmptyResponse>> ProfileSecurityEmailVerifyPatchWithHttpInfoAsync(ValidateEmailReq? validateEmailReq = default(ValidateEmailReq?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            profile.wire.Client.RequestOptions localVarRequestOptions = new profile.wire.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json", 
+                "text/json", 
+                "application/*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = profile.wire.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = profile.wire.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = validateEmailReq;
+
+            localVarRequestOptions.Operation = "ProfileSecurityApi.ProfileSecurityEmailVerifyPatch";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Bearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<EmptyResponse>("/ProfileSecurity/EmailVerify", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ProfileSecurityEmailVerifyPatch", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SendEmailVerifyRes</returns>
+        public SendEmailVerifyRes ProfileSecuritySendEmailVerifyRequestPost(int operationIndex = 0)
+        {
+            profile.wire.Client.ApiResponse<SendEmailVerifyRes> localVarResponse = ProfileSecuritySendEmailVerifyRequestPostWithHttpInfo();
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SendEmailVerifyRes</returns>
+        public profile.wire.Client.ApiResponse<SendEmailVerifyRes> ProfileSecuritySendEmailVerifyRequestPostWithHttpInfo(int operationIndex = 0)
+        {
+            profile.wire.Client.RequestOptions localVarRequestOptions = new profile.wire.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = profile.wire.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = profile.wire.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "ProfileSecurityApi.ProfileSecuritySendEmailVerifyRequestPost";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Bearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<SendEmailVerifyRes>("/ProfileSecurity/SendEmailVerifyRequest", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ProfileSecuritySendEmailVerifyRequestPost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SendEmailVerifyRes</returns>
+        public async System.Threading.Tasks.Task<SendEmailVerifyRes> ProfileSecuritySendEmailVerifyRequestPostAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            profile.wire.Client.ApiResponse<SendEmailVerifyRes> localVarResponse = await ProfileSecuritySendEmailVerifyRequestPostWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="profile.wire.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SendEmailVerifyRes)</returns>
+        public async System.Threading.Tasks.Task<profile.wire.Client.ApiResponse<SendEmailVerifyRes>> ProfileSecuritySendEmailVerifyRequestPostWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            profile.wire.Client.RequestOptions localVarRequestOptions = new profile.wire.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = profile.wire.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = profile.wire.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+
+            localVarRequestOptions.Operation = "ProfileSecurityApi.ProfileSecuritySendEmailVerifyRequestPost";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Bearer) required
+            // bearer authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<SendEmailVerifyRes>("/ProfileSecurity/SendEmailVerifyRequest", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ProfileSecuritySendEmailVerifyRequestPost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>
